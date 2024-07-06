@@ -835,7 +835,6 @@
 @media screen and (width <=768px) {
   .table {
     font-size: 0.8rem;
-    max-width: 80%;
   }
   .botonModificar {
     width: 90%;
