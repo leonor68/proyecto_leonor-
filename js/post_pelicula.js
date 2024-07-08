@@ -20,7 +20,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         const imagen = formData.get('imagen');
         //valido los inputs
         if (titulo === '' || genero === '' || duracion === '' || imagen === '') {
-            alert('Todos los campos son obligatorios');
+            swal({
+                title: "ERROR!",
+                text: "Debes completar todos los campos",
+                icon: "warning",
+                buttons: false,
+                timer: 2500
+              })
             return;
         }
         // levanto solo el nombre del file para enviarlo a la api
@@ -46,12 +52,24 @@ document.addEventListener('DOMContentLoaded', async () => {
         //si la respuesta es correcta, muestro un mensaje de exito y limpio los inputs del formulario
         // si el codigo es 201, la pelicula se agrego correctamente
         if (response.status === 201) {
-            alert('Pelicula agregada correctamente');
+            swal({
+                title: "Bien hecho!",
+                text: "Pelicula agregada correctamente",
+                icon: "success",
+                buttons: false,
+                timer: 2500
+              })
             formNuevaPelicula.reset();
             // que se recargue la pagina para ver la pelicula agregada
             location.reload();
         } else {
-            alert('Error al agregar la pelicula');
+            swal({
+                title: "Error",
+                text: "No se ha podido cargar la pelicula",
+                icon: "warning",
+                buttons: false,
+                timer: 2500
+              })
         }
        
     });

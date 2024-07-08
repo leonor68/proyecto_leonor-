@@ -18,6 +18,13 @@ function obtenerPeliculas() {
     })
     .catch(error => {
       // Manejo de errores
+      swal({
+        title: "Error!",
+        text: "No se pudo conectar con la base",
+        icon: "warning",
+        buttons: false,
+        timer: 2500
+      })
       console.error('Problema con la operatoria con la base:', error);
     });
 }
