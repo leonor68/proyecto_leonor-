@@ -66,21 +66,23 @@
     <main id="flecha" class="mainAd">
       <h1 class="tituloAdministrador">Gestión de películas del portal</h1>
       <section class="container">
-        <form
-          class="row"
-          id="loginForm"
-          action="post"
-          enctype="multipart/form-data"
+        <form 
+          id="formNuevaPelicula" 
+          action="" 
+          method="post" 
+          enctype="multipart/form-data" 
+          class="row row-cols-lg-auto g-3 align-items-center"
         >
           <div class="mb-3 col-12 col-md-4">
             <label for="titulo" class="form-label-c">Titulo</label>
             <input 
               type="text" 
-              class="form-control" 
+              class="form-control"
+              id="titulo" 
               placeholder="Titulo de la pelicula"
-              id="titulo_peli" 
+              name="titulo" 
               />
-            <div id="tituloError" class="error-message"></div>
+            <!-- <div id="tituloError" class="error-message"></div> -->
           </div>
 
           <div class="mb-3 col-12 col-md-4">
@@ -89,10 +91,10 @@
               type="text"
               class="form-control"
               id="duracion"
-              placeholder="2h 44m"
+              placeholder="2:44:30"
               name="duracion"
             />
-            <div id="duracionError" class="error-message"></div>
+            <!-- <div id="duracionError" class="error-message"></div> -->
           </div>
 
           <div class="mb-3 col-12 col-md-4">
@@ -102,20 +104,20 @@
             class="form-control" 
             id="genero" 
             placeholder="genero de la pelicula"
-            name="genero" />
-            <div id="generoError" class="error-message"></div>
+            name="genero" 
+            />
+            <!-- <div id="generoError" class="error-message"></div> -->
           </div>
 
           <div class="mb-3 col-12 col-md-4">
             <label for="imagen" class="form-label-c">Imagen</label>
-            <input
-              type="text"
-              class="form-control"
+            <input 
+              class="form-control" 
+              type="file" 
+              name="imagen" 
               id="imagen"
-              placeholder="nombre de imagen"
-              name="imagen"
             />
-            <div id="duracionError" class="error-message"></div>
+            <!-- <div id="duracionError" class="error-message"></div> -->
           </div>
 
           <div class="mb-3 mt-5">
@@ -204,7 +206,7 @@
 
     <script src="../js/bootstrap.bundle.min.js"></script>
 
-    <script src="../js/validacion_administrador.js"></script>
+    <script src="../js/post_pelicula.js"></script>
 
     <script src="../js/get_pelis.js"></script>
   </body>
