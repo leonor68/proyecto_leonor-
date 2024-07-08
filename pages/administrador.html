@@ -78,6 +78,7 @@
             <div
               id="tituloError"
               class="error-message"
+              placeholder="titulo de la pelicula"
               name="titulo_peli"
             ></div>
           </div>
@@ -96,8 +97,25 @@
 
           <div class="mb-3 col-12 col-md-4">
             <label for="genero" class="form-label-c">Genero</label>
-            <input type="text" class="form-control" id="genero" name="genero" />
+            <input 
+              type="text" 
+              class="form-control" 
+              id="genero" 
+              placeholder="genero de la pelicula"
+              name="genero" />
             <div id="generoError" class="error-message"></div>
+          </div>
+
+          <div class="mb-3 col-12 col-md-4">
+            <label for="imagen" class="form-label-c">Imagen</label>
+            <input
+              type="text"
+              class="form-control"
+              id="imagen"
+              placeholder="nombre de imagen"
+              name="imagen"
+            />
+            <div id="duracionError" class="error-message"></div>
           </div>
 
           <div class="mb-3 mt-5">
@@ -110,41 +128,21 @@
       </section>
 
       <section class="container mt-4">
-        <h2 class="listadoTitulo">Listado de Peliculas</h2>
+        <h2 class="listadoTitulo">Listado de Peliculas 
+          <button class="botonRegistro" id="refrescar-btn">Refrescar Películas</button></h2>
         <table class="table">
           <div class="container table-responsive-md">
             <thead class="encabezado">
               <tr>
                 <th scope="col">Id</th>
                 <th scope="col">Titulo</th>
-                <th scope="col">Género</th>
-                <th scope="col">Duracion</th>
+                <th scope="col">Duración</th>
+                <th scope="col">Genero</th>
                 <th scope="col">Imagen</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td scope="row">
-                  <a><small>1</small></a>
-                </td>
-                <td scope="row">
-                  <a><small>Kung Fu Panda 4</small></a>
-                </td>
-                <td scope="row">
-                  <a><small>Accion</small></a>
-                </td>
-                <td scope="row">
-                  <a><small>1h 55m</small></a>
-                </td>
-                <td>
-                  <img
-                    class="img-fluid img-thumbnail"
-                    width="80px"
-                    height="80px"
-                    src="../assets/img/pelis/kung_fu_panda_four_xlg.jpg"
-                  />
-                </td>
-              </tr>
+            <tbody id="peliculas-body">
+              
             </tbody>
           </div>
         </table>
@@ -207,5 +205,7 @@
     <script src="../js/bootstrap.bundle.min.js"></script>
 
     <script src="../js/validacion_administrador.js"></script>
+
+    <script src="../js/get_pelis.js"></script>
   </body>
 </html>
