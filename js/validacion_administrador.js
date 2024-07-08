@@ -12,9 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
       resetErrorMessages();
       var titulo_peli = document.getElementById("titulo_peli").value.trim();
       var duracion = document.getElementById("duracion").value.trim();
-      var resumen = document.getElementById("resumen").value.trim();
-      /**var imagen = document.getElementById("imagen").value.trim();*/
-      var imagefile = document.getElementById("imagen").value;
+      var resumen = document.getElementById("genero").value.trim();
+
       var isValid = true;
 
       if (titulo_peli === "") {
@@ -35,42 +34,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (resumen === "") {
         displayErrorMessage(
-          "resumenError",
-          "Por favor ingrese la Sinopsis de la pelicula."
+          "generoError",
+          "Por favor ingrese el Género de la pelicula."
         );
         isValid = false;
       }
-      if (!isValidImage(imagefile)) {
-        displayErrorMessage(
-          "imagenError",
-          "Por favor ingrese archivo con extensión jpg/jpeg válido."
-        );
-        isValid = false;
-      }
-
-      /**if (imagen === "") {
-              displayErrorMessage(
-                "imagenError",
-                "Por favor ingrese el archivo de la pelicula."
-              );
-              isValid = false;
-            }*/
 
       if (isValid) {
         alert("¡Película agregada correctamente!");
       }
     });
 });
-
-/** function isValidEmail(correo_elec) {
-        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return emailPattern.test(correo_elec);
-      }*/
-
-function isValidImage(imagefile) {
-  var imagePattern = /\.(jpg|jpeg)$/i;
-  return imagePattern.test(imagefile);
-}
 
 function displayErrorMessage(elementId, message) {
   var errorElement = document.getElementById(elementId);
