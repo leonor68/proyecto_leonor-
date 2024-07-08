@@ -73,7 +73,7 @@
           enctype="multipart/form-data" 
           class="row row-cols-lg-auto g-3 align-items-center"
         >
-          <div class="mb-3 col-12 col-md-4">
+            <div class="col-12 col-md-6">
             <label for="titulo" class="form-label-c">Titulo</label>
             <input 
               type="text" 
@@ -82,10 +82,9 @@
               placeholder="Titulo de la pelicula"
               name="titulo" 
               />
-            <!-- <div id="tituloError" class="error-message"></div> -->
           </div>
 
-          <div class="mb-3 col-12 col-md-4">
+            <div class="col-6 col-md-2">
             <label for="duracion" class="form-label-c">Duración</label>
             <input
               type="text"
@@ -94,10 +93,9 @@
               placeholder="2:44:30"
               name="duracion"
             />
-            <!-- <div id="duracionError" class="error-message"></div> -->
           </div>
 
-          <div class="mb-3 col-12 col-md-4">
+            <div class="col-6 col-md-4">
             <label for="genero" class="form-label-c">Genero</label>
             <input 
             type="text" 
@@ -106,10 +104,9 @@
             placeholder="genero de la pelicula"
             name="genero" 
             />
-            <!-- <div id="generoError" class="error-message"></div> -->
           </div>
 
-          <div class="mb-3 col-12 col-md-4">
+            <div class="col-12 col-md-12">
             <label for="imagen" class="form-label-c">Imagen</label>
             <input 
               class="form-control" 
@@ -117,21 +114,26 @@
               name="imagen" 
               id="imagen"
             />
-            <!-- <div id="duracionError" class="error-message"></div> -->
           </div>
 
-          <div class="mb-3 mt-5">
-            <button type="submit" class="botonRegistro">
-              Agregar pelicula
+            <div class="col-12 col-md-12">
+            <button type="submit" class="align-self-center btn btn-success botonRegistro">
+              Agregar Pelicula
             </button>
-            <input class="botonRegistro" type="reset" value="Clean" />
+            <!-- <button type="submit" class="align-self-center btn btn-success botonRegistro">
+              Modificar
+            </button>
+            <button type="submit" class="align-self-center btn btn-success botonRegistro">
+              Eliminar
+            </button> -->
+            <input class="botonRegistro" type="reset" value="Limpiar Formulario"/>
           </div>
         </form>
       </section>
 
       <section class="container mt-4">
         <h2 class="listadoTitulo">Listado de Peliculas 
-          <button class="botonRegistro" id="refrescar-btn">Refrescar Películas</button></h2>
+          <button class="botonRegistro" id="refrescar-btn">Actualizar listado</button></h2>
         <table class="table">
           <div class="container table-responsive-md">
             <thead class="encabezado">
